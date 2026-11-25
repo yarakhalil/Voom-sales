@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom channel colors for utility usage */
+.bg-ch-whatsapp { background-color: var(--ch-whatsapp); }
+.bg-ch-instagram { background-color: var(--ch-instagram); }
+.bg-ch-telegram { background-color: var(--ch-telegram); }
+.bg-ch-messenger { background-color: var(--ch-messenger); }
+.bg-ch-phone { background-color: var(--ch-phone); }
+.bg-ch-tour { background-color: var(--ch-tour); }
+.bg-ch-email { background-color: var(--ch-email); }
+.bg-ch-discord { background-color: var(--ch-discord); }
+
+.text-ch-whatsapp { color: var(--ch-whatsapp); }
+.text-ch-instagram { color: var(--ch-instagram); }
+.text-ch-telegram { color: var(--ch-telegram); }
+.text-ch-messenger { color: var(--ch-messenger); }
+.text-ch-phone { color: var(--ch-phone); }
+.text-ch-tour { color: var(--ch-tour); }
+.text-ch-email { color: var(--ch-email); }
+.text-ch-discord { color: var(--ch-discord); }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.9); opacity: 0.5; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  opacity: 0.4;
+  animation: pulseGlow 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
